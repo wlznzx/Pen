@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserNotifyTextView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_shape"
+            android:textColor="@android:color/white"
+            android:text="搜索蓝牙" />
+
+
+        <Button
+            android:id="@+id/DisConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="断开连接" />
+
+        <Button
+            android:id="@+id/startConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始连接"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/OffLieneMod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="离线模式" />
+
+        <Button
+            android:id="@+id/OnLineMod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实时模式" />
+
+
+        <Button
+            android:id="@+id/OnLineMod2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实时模式2" />
+
+
+        <!--
+                    <Button
+                        android:id="@+id/HistoryData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="历史数据" />
+        -->
+
+        <Button
+            android:id="@+id/PageShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户数据" />
+
+        <Button
+            android:id="@+id/reNameBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝牙改名" />
+
+        <Button
+            android:id="@+id/getPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电量" />
+
+        <Button
+            android:id="@+id/update_hw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="升级固件" />
+
+        <Button
+            android:id="@+id/hw_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="固件版本" />
+
+        <Button
+            android:id="@+id/clearLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除log" />
+
+        <Button
+            android:id="@+id/SdkVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SDK版本" />
+
+    </LinearLayout>
+
+    <com.maxeye.einksdk1.CornerListView
+        android:id="@+id/BluetoothListView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/list_corner_round_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider_bg"
+        android:dividerHeight="0.5px" />
+
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/BluetoothListView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="@string/please_connect_the_equipment"
+        android:textColor="@color/hra_color"
+        android:textSize="33sp" />
+
+    <TextView
+        android:id="@+id/UserNotifyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BluetoothListView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="10dp"
+        android:scrollbars="vertical"
+        android:lines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/notifyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="TextView"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/control_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F0F0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/clean_page"
+                    android:background="@drawable/eraser_selector"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="68dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="清除" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/save_page"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:visibility="gone"
+                    android:text="保存" />
+
+                <Button
+                    android:id="@+id/undo"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/undo_selector" />
+
+                <Button
+                    android:id="@+id/redo"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/todo_selector" />
+
+                <Button
+                    android:id="@+id/erase"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/erasser_only_selector" />
+
+                <Button
+                    android:id="@+id/pen1"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/pen_selector" />
+
+                <Button
+                    android:id="@+id/pen2"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/pencil_selector" />
+
+                <Button
+                    android:id="@+id/pen3"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/writing_brush_selector" />
+
+                <Button
+                    android:id="@+id/pen4"
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/marker_pen_selector"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/color0"
+                    android:layout_width="@dimen/corner_shape"
+                    android:layout_height="@dimen/corner_shape"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape_black" />
+
+                <Button
+                    android:id="@+id/color1"
+                    android:layout_width="@dimen/corner_shape"
+                    android:layout_height="@dimen/corner_shape"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape_blue" />
+
+                <Button
+                    android:id="@+id/color2"
+                    android:layout_width="@dimen/corner_shape"
+                    android:layout_height="@dimen/corner_shape"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape" />
+
+                <Button
+                    android:id="@+id/color3"
+                    android:layout_width="@dimen/corner_shape"
+                    android:layout_height="@dimen/corner_shape"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape_y" />
+
+                <RelativeLayout
+                    android:id="@+id/save_online2_pic"
+                    android:background="@drawable/save_selector"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="68dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="导出图片" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"></LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@android:style/Widget.Holo.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/control_bar">
+
+            <com.maxeye.einksdk.EinkClient.EinkClientView
+                android:id="@+id/hover_EinkPaintViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

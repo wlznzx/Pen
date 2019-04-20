@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color3">#FFFF81</color>
+    <color name="blue_text_007dff">#ff007dff</color>
+    <color name="backgound_fcfcfc">#fffcfcfc</color>
+
+
+    <color name="hra_color">#FF8C00</color>
+
+</resources>

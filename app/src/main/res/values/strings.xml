@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">手写板</string>
+
+    <!--for test-->
+    <string name="local_service_started">Local service has started</string>
+    <string name="local_service_stopped">Local service has stopped</string>
+    <string name="local_service_label">Sample Local Service</string>
+    <string name="gotoappcenter">Enter the home page</string>
+
+    <string name="please_connect_the_equipment">Please connect the equipment</string>
+    <string name="type_file_name">Type File Name</string>
+
+</resources>

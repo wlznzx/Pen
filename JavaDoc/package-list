@@ -1,0 +1,14 @@
+com.maxeye.einksdk.Bluetooth
+com.maxeye.einksdk.DBdata
+com.maxeye.einksdk.EinkClient
+com.maxeye.einksdk.MyScript
+com.maxeye.einksdk.OldDBdata
+com.maxeye.einksdk.Utils
+com.maxeye.einksdk.YModem
+com.maxeye.einksdk.wkpaintview.data
+com.maxeye.einksdk.wkpaintview.interfaces
+com.maxeye.einksdk.wkpaintview.painttools
+com.maxeye.einksdk.wkpaintview.shapes
+com.maxeye.einksdk.wkpaintview.svgandroid
+com.maxeye.einksdk.wkpaintview.utils
+com.maxeye.einksdk.wkpaintview.view

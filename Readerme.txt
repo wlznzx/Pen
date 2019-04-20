@@ -1,0 +1,20 @@
+﻿请解压EinkSDK.zip 即可得到一个完整 EinkSDK Demo 工程，同时此工程还包括如下内容：
+
+
+1.使用说明文档：
+   位置：.\app\libs\EINKSDK User manual.pdf
+
+2.库文件：
+   位置：.\app\libs\einksdk-release.aar
+
+3.Demo应用(apk)：
+   .\app\build\outputs\apk\debug\app-debug.apk
+
+4. EinkSDK 各函数使用说明。
+    .\JavaDoc
+
+
+
+
+
+

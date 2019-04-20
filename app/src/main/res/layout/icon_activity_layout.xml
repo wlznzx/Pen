@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/pictureinfoactivity_layout_container_ly"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.maxeye.einksdk.EinkClient.EinkClientView
+            android:background="@android:color/transparent"
+            android:id="@+id/PictureInfo_panintview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_centerInParent="true"
+            android:id="@+id/pictureinfoactivity_layout_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout></android.support.constraint.ConstraintLayout>
