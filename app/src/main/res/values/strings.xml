@@ -9,5 +9,12 @@
 
     <string name="please_connect_the_equipment">Please connect the equipment</string>
     <string name="type_file_name">Type File Name</string>
+    <string name="scan_blue">Scan Bluetooth</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="broad_mode">Drawing board</string>
+    <string name="note_mode">Note Mode</string>
+    <string name="export_picture">Export Pic</string>
+    <string name="bluetooch_connected">Bluetooth Connected</string>
+    <string name="bluetooch_disconnect">Bluetooth Disconnect</string>
 
 </resources>

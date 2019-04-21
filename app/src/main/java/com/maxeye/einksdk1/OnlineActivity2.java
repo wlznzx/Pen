@@ -45,7 +45,7 @@ public class OnlineActivity2 extends Activity {
         einkPaintViewLayout = findViewById(R.id.hover_EinkPaintViewLayout);
         einkClient = ((MyApplication) getApplication()).getEinkClient();
 
-
+        notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
         //需要加载的 pageBeanId
         pageBeanId = getIntent().getIntExtra("PageBeanId", -1);
 
@@ -58,12 +58,13 @@ public class OnlineActivity2 extends Activity {
 
             @Override
             public void EventBTConnectState(String state) {
-
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
 
             @Override
             public void UserMessage(EventUserMessage message) {
-                notifyText.setText(message.getMessage());
+                // notifyText.setText(message.getMessage());
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
         };
 

@@ -9,5 +9,6 @@
 
 
     <color name="hra_color">#FF8C00</color>
+    <color name="hra_color_pressed">#F0FF8C00</color>
 
 </resources>

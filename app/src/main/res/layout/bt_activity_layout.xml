@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_below="@id/UserNotifyTextView"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
@@ -17,14 +17,18 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bt_shape"
             android:textColor="@android:color/white"
-            android:text="搜索蓝牙" />
+            android:layout_margin="10dp"
+            android:text="@string/scan_blue" />
 
 
         <Button
             android:id="@+id/DisConnect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="断开连接" />
+            android:background="@drawable/bt_shape"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:text="@string/disconnect" />
 
         <Button
             android:id="@+id/startConnect"
@@ -37,20 +41,27 @@
             android:id="@+id/OffLieneMod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="离线模式" />
 
         <Button
             android:id="@+id/OnLineMod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="实时模式" />
+            android:background="@drawable/bt_shape"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:text="@string/note_mode" />
 
 
         <Button
             android:id="@+id/OnLineMod2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="实时模式2" />
+            android:background="@drawable/bt_shape"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:text="@string/broad_mode" />
 
 
         <!--
@@ -66,42 +77,49 @@
             android:id="@+id/PageShow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="用户数据" />
 
         <Button
             android:id="@+id/reNameBT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="蓝牙改名" />
 
         <Button
             android:id="@+id/getPower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="电量" />
 
         <Button
             android:id="@+id/update_hw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="升级固件" />
 
         <Button
             android:id="@+id/hw_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="固件版本" />
 
         <Button
             android:id="@+id/clearLog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="清除log" />
 
         <Button
             android:id="@+id/SdkVersion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="SDK版本" />
 
     </LinearLayout>

@@ -1,9 +1,13 @@
 package com.maxeye.einksdk1;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +37,8 @@ public class OnLineActivity extends Activity {
         einkView = findViewById(R.id.online_panintview);
         einkClient = ((MyApplication) getApplication()).getEinkClient();
 
-
+        //notifyText.setText(einkClient.);
+        notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
         //需要加载的 pageBeanId
         pageBeanId = getIntent().getIntExtra("PageBeanId", -1);
 
@@ -46,12 +51,13 @@ public class OnLineActivity extends Activity {
 
             @Override
             public void EventBTConnectState(String state) {
-
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
 
             @Override
             public void UserMessage(EventUserMessage message) {
-                notifyText.setText(message.getMessage());
+                // notifyText.setText(message.getMessage());
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
         };
 
@@ -98,8 +104,23 @@ public class OnLineActivity extends Activity {
         findViewById(R.id.save_pic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (einkClient.SavePictrueWithBackground("/sdcard/aaa.png", einkView))
-                    Toast.makeText(getApplicationContext(), "保存成功： /sdcard/aaa.png", Toast.LENGTH_LONG).show();
+//                if (einkClient.SavePictrueWithBackground("/sdcard/aaa.png", einkView))
+//                    Toast.makeText(getApplicationContext(), "保存成功： /sdcard/aaa.png", Toast.LENGTH_LONG).show();
+
+                final EditText inputServer = new EditText(OnLineActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(OnLineActivity.this);
+                builder.setTitle(R.string.type_file_name).setIcon(android.R.drawable.ic_dialog_info).setView(inputServer)
+                        .setNegativeButton(android.R.string.cancel, null);
+                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        String str = inputServer.getText().toString();
+                        Log.d("wlDebug", "str = " + str);
+                        if (einkClient.SavePictrueWithBackground("/sdcard/" + str + ".png", einkView))
+                            Toast.makeText(getApplicationContext(), "/sdcard/" + str + ".png", Toast.LENGTH_LONG).show();
+                    }
+                });
+                builder.show();
             }
         });
     }

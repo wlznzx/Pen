@@ -21,6 +21,7 @@ public class SplashActivity extends AppCompatActivity {
             Manifest.permission.BLUETOOTH_ADMIN,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,//写内存卡的权限
             Manifest.permission.READ_EXTERNAL_STORAGE,//读内存卡的权限
+            Manifest.permission.ACCESS_FINE_LOCATION
     };
     private static final int REQUEST_CODE_STORAGE = 1;
     SharedPreferences sp;//用于存储是否第一次进入

@@ -11,20 +11,23 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/notifyTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:text="TextView"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:visibility="invisible" />
+
 
         <RelativeLayout
             android:id="@+id/control_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#F0F0F0">
+
+            <TextView
+                android:id="@+id/notifyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -138,7 +141,7 @@
                         android:layout_marginLeft="68dp"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:text="导出图片" />
+                        android:text="@string/export_picture" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>

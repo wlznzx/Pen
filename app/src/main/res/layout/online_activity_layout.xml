@@ -9,54 +9,78 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/notifyTextView"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:text="TextView"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <LinearLayout
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/clean_page"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/notifyTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="清除" />
+                android:layout_centerVertical="true"
+                android:scrollbars="vertical"
+                android:text="TextView"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/clean_page"
+                    android:background="@drawable/eraser_selector"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="68dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="清除" />
+                </RelativeLayout>
 
-            <Button
-                android:id="@+id/save_page"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="保存" />
+                <Button
+                    android:id="@+id/save_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:text="保存" />
 
-            <Button
-                android:id="@+id/optimize_on"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="笔记优化打开" />
-            <Button
-                android:id="@+id/optimize_off"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="笔记优化关闭" />
+                <Button
+                    android:id="@+id/optimize_on"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:text="笔记优化打开" />
+                <Button
+                    android:id="@+id/optimize_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:text="笔记优化关闭" />
+                <RelativeLayout
+                    android:id="@+id/save_pic"
+                    android:background="@drawable/save_selector"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="68dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/export_picture" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
-            <Button
-                android:id="@+id/save_pic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="导出图片" />
-        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

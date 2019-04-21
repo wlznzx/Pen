@@ -9,5 +9,11 @@
     <string name="gotoappcenter">Enter the home page</string>
     <string name="please_connect_the_equipment">请连接设备</string>
     <string name="type_file_name">键入文件名</string>
-
+    <string name="scan_blue">搜索蓝牙</string>
+    <string name="disconnect">断开连接</string>
+    <string name="broad_mode">画板模式</string>
+    <string name="note_mode">笔记模式</string>
+    <string name="export_picture">导出图片</string>
+    <string name="bluetooch_connected">蓝牙已连接</string>
+    <string name="bluetooch_disconnect">蓝牙未连接</string>
 </resources>

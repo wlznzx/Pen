@@ -124,18 +124,21 @@ public class BtActivity extends Activity {
             public void EventBTConnectState(String message) {
                 // TODO: 2018/4/21 0021 处理 蓝牙连接 状态
                 Log.i(TAG, "EventBTConnectState: " + message);
-                notifyText.setText(notifyText.getText() + "\r\n" + message);
+                // notifyText.setText(notifyText.getText() + "\r\n" + message);
                 if (message.equals("RxBleConnectionState{CONNECTED}")) {
                     Log.d("wlDebug", "CONNECTED");
                     // go实时模式;
-                    startActivity(new Intent(getApplicationContext(), OnlineActivity2.class));
+                    // startActivity(new Intent(getApplicationContext(), OnlineActivity2.class));
                 }
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
 
             @Override
             public void UserMessage(EventUserMessage message) {
                 // TODO: 2018/4/21 0021 处理 SDK 发布的其他信息，详情请参考附录 消息列表 
-                notifyText.setText(notifyText.getText() + "\r\n" + message.getMessage());
+                // notifyText.setText(notifyText.getText() + "\r\n" + message.getMessage());
+                // notifyText.setText(message.getMessage());
+                notifyText.setText(einkClient.IsBluetoothConnected()?R.string.bluetooch_connected:R.string.bluetooch_disconnect);
             }
         };
 
